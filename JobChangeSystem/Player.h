@@ -1,5 +1,6 @@
 #ifndef Player_h_
 #define Player_h_
+#include "Monster.h"
 #include <string>
 
 using namespace std;
