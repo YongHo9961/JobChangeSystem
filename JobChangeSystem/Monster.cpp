@@ -1,4 +1,4 @@
-#include "Monster.h"
+ï»¿#include "Monster.h"
 #include "Player.h"
 #include <string>
 #include <iostream>
@@ -11,18 +11,18 @@ void Monster :: attack(Player* player) {
 		damage = 1;
 	}
 	if (HP > 0) {
-		cout << getName() << "ÀÇ ¸öÅë¹ÚÄ¡±â!!" << endl;
-		cout << "ÇÃ·¹ÀÌ¾î´Â " << damage << "¸¸Å­ Ã¼·ÂÀÌ ´â¾Ò½À´Ï´Ù." << endl;
+		cout << getName() << "ì˜ ëª¸í†µë°•ì¹˜ê¸°!!" << endl;
+		cout << "í”Œë ˆì´ì–´ëŠ” " << damage << "ë§Œí¼ ì²´ë ¥ì´ ë‹³ì•˜ìŠµë‹ˆë‹¤." << endl;
 		player->setHp(player->getHp() - damage);
 		if (player->getHp() - damage <= 0) {
 			player->setHp(0);
 		}
 		if (player->getHp() > 0) {
-			cout << "ÇÃ·¹ÀÌ¾îÀÇ Ã¼·ÂÀº " << player->getHp() << "¸¸Å­ ³²¾Ò´Ù." << endl;
+			cout << "í”Œë ˆì´ì–´ì˜ ì²´ë ¥ì€ " << player->getHp() << "ë§Œí¼ ë‚¨ì•˜ë‹¤." << endl;
 		}
 		else {
-			cout << "ÇÃ·¹ÀÌ¾îÀÇ Ã¼·ÂÀÌ ¸ðµÎ ´â¾Ò´Ù." << endl;
-			cout << "ÇÃ·¹ÀÌ¾îÀÇ ´« ¾ÕÀÌ ±ô±ôÇØÁø´Ù..." << endl;
+			cout << "í”Œë ˆì´ì–´ì˜ ì²´ë ¥ì´ ëª¨ë‘ ë‹³ì•˜ë‹¤." << endl;
+			cout << "í”Œë ˆì´ì–´ì˜ ëˆˆ ì•žì´ ê¹œê¹œí•´ì§„ë‹¤..." << endl;
 		}
 	}
 	else {
@@ -33,39 +33,30 @@ void Monster :: attack(Player* player) {
 string Monster :: getName() {
 	return Name;
 }
-
 int Monster :: getHP() {
 	return HP;
 }
-
 int Monster::getPower() {
 	return Power;
 }
-
 int Monster::getDefence() {
 	return Defence;
 }
-
 int Monster::getSpeed() {
 	return Speed;
 }
-
 void Monster::setName(string name) {
 	Name = name;
 }
-
 void Monster::setHP(int hp) {
 	HP = hp;
 }
-
 void Monster::setPower(int power) {
 	Power = power;
 }
-
 void Monster::setDefence(int defence) {
 	Defence = defence;
 }
-
 void Monster::setSpeed(int speed) {
 	Speed = speed;
 }

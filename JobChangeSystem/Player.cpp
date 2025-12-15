@@ -1,4 +1,4 @@
-#include "Player.h"
+ï»¿#include "Player.h"
 #include "Monster.h"
 #include <iostream>
 #include <string>
@@ -6,8 +6,8 @@
 using namespace std;
 
 void Player::printPlayerStatus() {
-	cout << "===============Ä³¸¯ÅÍ Á¤º¸Ã¢===============" << endl;
-	cout << "Á÷¾÷: " << job_name << " ´Ð³×ÀÓ: " << nickname << endl;
+	cout << "===============ìºë¦­í„° ì •ë³´ì°½===============" << endl;
+	cout << "ì§ì—…: " << job_name << " ë‹‰ë„¤ìž„: " << nickname << endl;
 	cout << "HP: " << HP << " MP: " << MP << endl;
 	cout << "Power: " << Power << " Defence: " << Defence << endl;
 	cout << "Accuracy: " << Accuracy << " Speed: " << Speed << endl;

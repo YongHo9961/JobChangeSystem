@@ -1,4 +1,4 @@
-
+﻿
 #ifndef Monster_h_
 #define Monster_h_
 #include "Player.h"
@@ -39,9 +39,5 @@ protected:
 	int Defence;
 	int Speed;
 };
-
-
-
-
 
 #endif

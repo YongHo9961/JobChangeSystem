@@ -1,4 +1,4 @@
-
+ï»¿
 #ifndef Player_h_
 #define Player_h_
 #include <string>
@@ -6,7 +6,6 @@
 using namespace std;
 
 class Monster;
-
 
 class Player {
 public:
@@ -35,7 +34,7 @@ public:
 	void setSpeed(int speed);
 
 protected:
-	string job_name = "ÃÊº¸ÀÚ";
+	string job_name = "ì´ˆë³´ì";
 	string nickname;
 	int Level = 1;
 	int HP = 20;
@@ -44,16 +43,7 @@ protected:
 	int Defence = 20;
 	int Accuracy = 20;
 	int Speed = 20;
-
-
-
 };
-
-
-
-
-
-
 
 
 

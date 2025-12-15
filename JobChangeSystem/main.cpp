@@ -1,4 +1,4 @@
-#include <iostream>
+Ôªø#include <iostream>
 #include <string>
 #include "Player.h"
 #include "Warrior.h"
@@ -20,15 +20,15 @@ int main() {
 	Magician M(nickname);
 	Thief T(nickname);
 	Archer A(nickname);
-	Monster Mon("ΩΩ∂Û¿”");
+	Monster Mon("Ïä¨ÎùºÏûÑ");
 	int JobChoice;
 	int NumChoice1;
 	int NumChoice2;
 
-	cout << "æ»≥Á«œººø‰ øÎªÁ¥‘" << endl;
-	cout << "¥–≥◊¿”¿ª ¿‘∑¬«ÿ¡÷ººø‰." << endl;
+	cout << "ÏïàÎÖïÌïòÏÑ∏Ïöî Ïö©ÏÇ¨Îãò" << endl;
+	cout << "ÎãâÎÑ§ÏûÑÏùÑ ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî." << endl;
 	getline(cin, nickname);
-	cout << "¡˜æ˜¿ª º±≈√«ÿ¡÷ººø‰." << endl;
+	cout << "ÏßÅÏóÖÏùÑ ÏÑ†ÌÉùÌï¥Ï£ºÏÑ∏Ïöî." << endl;
 	cout << "1.Warrior 2.Magician 3.Thief 4.Archer" << endl;
 	cin >> JobChoice;
 	switch (JobChoice) {
@@ -45,21 +45,21 @@ int main() {
 		P1 = &A;
 		break;
 	default:
-		cout << "º˝¿⁄∏¶ ¿ﬂ∏¯ ¿‘∑¬«œºÃΩ¿¥œ¥Ÿ." << endl;
+		cout << "Ïà´ÏûêÎ•º ÏûòÎ™ª ÏûÖÎ†•ÌïòÏÖ®ÏäµÎãàÎã§." << endl;
 		break;
 	}
-	cout << "¡˜æ˜º±≈√¿ª øœ∑·«ﬂΩ¿¥œ¥Ÿ!" << endl;
+	cout << "ÏßÅÏóÖÏÑ†ÌÉùÏùÑ ÏôÑÎ£åÌñàÏäµÎãàÎã§!" << endl;
 
 	while (1) {
-		cout << "π´æ˘¿ª «œΩ√∞⁄Ω¿¥œ±Ó?" << endl;
-		cout << "1.¥¯¿¸¿‘¿Â 2.ƒ≥∏Ø≈Õ¡§∫∏ 3.∞‘¿”¡æ∑·" << endl;
+		cout << "Î¨¥ÏóáÏùÑ ÌïòÏãúÍ≤†ÏäµÎãàÍπå?" << endl;
+		cout << "1.ÎçòÏ†ÑÏûÖÏû• 2.Ï∫êÎ¶≠ÌÑ∞Ï†ïÎ≥¥ 3.Í≤åÏûÑÏ¢ÖÎ£å" << endl;
 		cin >> NumChoice1;
 		switch (NumChoice1) {
 		case 1:
-			cout << "¥¯¿¸ø° ¿‘¿Â«ﬂΩ¿¥œ¥Ÿ." << endl;
-			cout << "æ—!! "<< Mon.getName() << "¿Ã ≥™≈∏≥µ¥Ÿ!!" << endl;
+			cout << "ÎçòÏ†ÑÏóê ÏûÖÏû•ÌñàÏäµÎãàÎã§." << endl;
+			cout << "Ïïó!! "<< Mon.getName() << "Ïù¥ ÎÇòÌÉÄÎÇ¨Îã§!!" << endl;
 			while (1) {
-				cout << "1.¿¸≈ı 2.∏ÛΩ∫≈Õ¡§∫∏∫∏±‚ 3.µµ∏¡ƒ°±‚" << endl;
+				cout << "1.Ï†ÑÌà¨ 2.Î™¨Ïä§ÌÑ∞Ï†ïÎ≥¥Î≥¥Í∏∞ 3.ÎèÑÎßùÏπòÍ∏∞" << endl;
 				cin >> NumChoice2;
 				if (NumChoice2 == 1) {
 					if (P1->getSpeed() >= Mon.getSpeed()) {
@@ -72,21 +72,21 @@ int main() {
 					}
 
 					if (P1->getHp() <= 0 || Mon.getHP() <= 0) {
-						cout << "¿¸≈ı ¡æ∑·!!" << endl;
+						cout << "Ï†ÑÌà¨ Ï¢ÖÎ£å!!" << endl;
 						exit(0);
 					}
 				}
 				else if (NumChoice2 == 2) {
-					cout << "∏ÛΩ∫≈Õ ¿Ã∏ß: " << Mon.getName() << endl;
+					cout << "Î™¨Ïä§ÌÑ∞ Ïù¥Î¶Ñ: " << Mon.getName() << endl;
 					cout << "HP: " << Mon.getHP() <<" POWER: " << Mon.getPower() << endl;
 					cout << "Defence: " << Mon.getDefence() << " Speed: " << Mon.getSpeed() << endl;
 				}
 				else if (NumChoice2 == 3) {
-					cout << "¥¯¿¸ø°º≠ ≈ª√‚«’¥œ¥Ÿ" << endl;
+					cout << "ÎçòÏ†ÑÏóêÏÑú ÌÉàÏ∂úÌï©ÎãàÎã§" << endl;
 					break;
 				}
 				else {
-					cout << "¿ﬂ∏¯µ» π¯»£∏¶ ¿‘∑¬«ﬂΩ¿¥œ¥Ÿ. ¥ŸΩ√ ¿‘∑¬«ÿ¡÷ººø‰." << endl;
+					cout << "ÏûòÎ™ªÎêú Î≤àÌò∏Î•º ÏûÖÎ†•ÌñàÏäµÎãàÎã§. Îã§Ïãú ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî." << endl;
 				}
 				cout << endl;
 			}
@@ -95,10 +95,10 @@ int main() {
 			P1->printPlayerStatus();
 			break;
 		case 3:
-			cout << "∞‘¿”¿ª ¡æ∑·«’¥œ¥Ÿ." << endl;
+			cout << "Í≤åÏûÑÏùÑ Ï¢ÖÎ£åÌï©ÎãàÎã§." << endl;
 			exit(0);
 		default:
-			cout << "º˝¿⁄∏¶ ¿ﬂ∏¯ ¿‘∑¬«œø¥Ω¿¥œ¥Ÿ. ¥ŸΩ√ ¿‘∑¬«ÿ¡÷ººø‰." << endl;
+			cout << "Ïà´ÏûêÎ•º ÏûòÎ™ª ÏûÖÎ†•ÌïòÏòÄÏäµÎãàÎã§. Îã§Ïãú ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî." << endl;
 			break;
 		}
 		cout << endl;
