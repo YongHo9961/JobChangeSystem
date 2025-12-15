@@ -1,9 +1,12 @@
+
 #ifndef Monster_h_
 #define Monster_h_
-#include <string>
 #include "Player.h"
+#include <string>
+
 
 using namespace std;
+
 
 class Monster {
 public:

@@ -1,7 +1,9 @@
+
 #ifndef Warrior_h_
 #define Warrior_h_
 #include <string>
 #include "Player.h"
+
 
 using namespace std;
 
@@ -14,7 +16,6 @@ public:
 		Defence = 40;
 		Speed = 10;
 	}
-	void attack();
 	void attack(Monster* monster);
 
 

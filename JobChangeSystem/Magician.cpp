@@ -1,12 +1,11 @@
 #include "Magician.h"
+#include "Monster.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-void Magician::attack() {
-	cout << "매직 미사일!!" << endl;
-	}
+
 void Magician::attack(Monster* monster) {
 	int damage = Power - monster->getDefence();
 	if (damage <= 0) {

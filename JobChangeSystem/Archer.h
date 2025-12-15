@@ -1,9 +1,12 @@
+
 #ifndef Archer_h_
 #define Archer_h_
 #include <string>
 #include "Player.h"
 
+
 using namespace std;
+
 
 class Archer : public Player {
 public:
@@ -16,14 +19,10 @@ public:
 
 	}
 
-	void attack();
 	void attack(Monster* monster);
 
 
 };
-
-
-
 
 
 #endif

@@ -1,3 +1,4 @@
+
 #ifndef Thief_h_
 #define Thief_h_
 #include <string>
@@ -14,7 +15,6 @@ public:
 		Accuracy = 30;
 		Speed = 40;
 	}
-	void attack();
 	void attack(Monster* monster);
 };
 

@@ -62,7 +62,19 @@ int main() {
 				cout << "1.전투 2.몬스터정보보기 3.도망치기" << endl;
 				cin >> NumChoice2;
 				if (NumChoice2 == 1) {
+					if (P1->getSpeed() >= Mon.getSpeed()) {
+						P1->attack(&Mon);
+						Mon.attack(P1);
+					}
+					else {
+						Mon.attack(P1);
+						P1->attack(&Mon);
+					}
 
+					if (P1->getHp() <= 0 || Mon.getHP() <= 0) {
+						cout << "전투 종료!!" << endl;
+						exit(0);
+					}
 				}
 				else if (NumChoice2 == 2) {
 					cout << "몬스터 이름: " << Mon.getName() << endl;

@@ -1,17 +1,17 @@
 #include "Warrior.h"
+#include "Monster.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 
-void Warrior :: attack() {
-	cout << "파워 스트라이크!!" << endl;
-}
 
 void Warrior::attack(Monster* monster) {
 	int damage = Power - monster->getDefence();
 	if (damage <= 0) {
 		damage = 1;
+	}
 		cout << "파워 스트라이크!!" << endl;
 		cout << monster->getName() << "은 " << damage << "만큼의 피해를 입었다." << endl;
 		monster->setHP(monster->getHP() - damage);
@@ -26,5 +26,4 @@ void Warrior::attack(Monster* monster) {
 			cout << monster->getName() << "이 쓰러졌다!!" << endl;
 			cout << "플레이어는 승리했다!!" << endl;
 		}
-	}
-	}
+}

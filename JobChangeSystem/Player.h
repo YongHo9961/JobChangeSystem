@@ -1,17 +1,19 @@
+
 #ifndef Player_h_
 #define Player_h_
-#include "Monster.h"
 #include <string>
 
 using namespace std;
+
+class Monster;
+
 
 class Player {
 public:
 	Player(string nickname) :nickname(nickname) {
 
 	}
-	virtual void attack() = 0;
-	virtual void attack(Monster* monster) = 0;
+	virtual void attack(Monster* Monster) = 0;
 	void printPlayerStatus();
 	
 	string getJobname();

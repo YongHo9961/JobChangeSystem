@@ -1,21 +1,21 @@
 #include "Thief.h"
+#include "Monster.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-void Thief :: attack() {
-	cout << "럭키 세븐!!" << endl;
-}
+
 void Thief::attack(Monster* monster) {
-	int damage = Power - monster->getDefence();
-	if (damage/5 <= 0) {
+	int damage = (Power - monster->getDefence()) / 5;
+	if (damage <= 0) {
 		damage = 1;
 	}
-	cout << "새비지 블로우!1" << endl;
+	cout << "새비지 블로우!!" << endl;
 	for (int i = 0; i < 5; i++) {
-		monster->setHP(monster->getHP() - (damage / 5));
-		cout << monster->getName() << "에게 " << damage / 5 << "만큼 피해를 입혔다." << endl;
-		if (monster->getHP() - (damage / 5) <= 0) {
+		monster->setHP(monster->getHP() - damage);
+		cout << monster->getName() << "에게 " << damage << "만큼 피해를 입혔다." << endl;
+		if (monster->getHP() <= 0) {
 			monster->setHP(0);
 			break;
 		}

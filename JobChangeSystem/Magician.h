@@ -1,7 +1,9 @@
+
 #ifndef Magican_h_
 #define Magician_h_
 #include <string>
 #include "Player.h"
+
 
 using namespace std;
 
@@ -14,7 +16,6 @@ public:
 		Power = 40;
 		Defence = 10;
 	}
-	void attack();
 	void attack(Monster* monster);
 };
 
