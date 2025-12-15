@@ -9,98 +9,7 @@
 
 using namespace std;
 
-class Player {
-protected:
-	string job_name = "초보자";
-	string nickname;
-	int Level = 1;
-	int HP = 20;
-	int MP = 20;
-	int Power = 20;
-	int Defence = 20;
-	int Accuracy = 20;
-	int Speed = 20;
 
-
-public:
-	Player(string nickname):nickname(nickname) {
-
-	}
-	virtual void attack() = 0;
-
-	void printPlayerStatus() {
-		cout << "===============캐릭터 정보창===============" << endl;
-		cout << "직업: " << job_name << " 닉네임: " << nickname << endl;
-		cout << "HP: " << HP << " MP: " << MP << endl;
-		cout << "Power: " << Power << " Defence: " << Defence << endl;
-		cout << "Accuracy: " << Accuracy << " Speed: " << Speed << endl;
-	}
-	
-
-};
-
-class Warrior : public Player {
-
-public:
-	Warrior(string nickname) : Player(nickname) {
-		job_name = "Warrior";
-		HP = 40;
-		Defence = 40;
-		Speed = 10;
-	}
-	void attack() {
-		cout << "파워 스트라이크!!" << endl;
-	}
-
-
-
-};
-
-class Magician : public Player {
-public:
-	Magician(string nickname) : Player(nickname) {
-		job_name = "Magiian";
-		HP = 10;
-		MP = 40;
-		Power = 40;
-		Defence = 10;
-	}
-
-	void attack() {
-		cout << "매직 미사일!!" << endl;
-	}
-
-};
-
-class Thief : public Player {
-public:
-	Thief(string nickname):Player(nickname) {
-		job_name = "Thief";
-		Power = 30;
-		Accuracy = 30;
-		Speed = 40;
-	}
-	void attack() {
-		cout << "럭키 세븐!!" << endl;
-	}
-
-};
-
-class Archer :public Player {
-public:
-	Archer(string nickname) : Player(nickname) {
-		job_name = "Archer";
-		Power = 35;
-		Defence = 10;
-		Accuracy = 40;
-		Speed = 30;
-
-	}
-	void attack() {
-		cout << "더블 샷!!" << endl;
-	}
-
-};
 
 
 int main() {
@@ -136,9 +45,9 @@ int main() {
 		cout << "숫자를 잘못 입력하셨습니다." << endl;
 		break;
 	}
+	cout << "직업선택을 완료했습니다!" << endl;
 
 	while (1) {
-		cout << "직업선택을 완료했습니다!" << endl;
 		cout << "무엇을 하시겠습니까?" << endl;
 		cout << "1.공격 2.캐릭터정보 3.게임종료" << endl;
 		cin >> NumChoice;
