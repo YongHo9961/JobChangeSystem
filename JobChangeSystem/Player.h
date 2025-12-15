@@ -11,7 +11,26 @@ public:
 
 	}
 	virtual void attack() = 0;
+	virtual void attack(Monster* monster) = 0;
 	void printPlayerStatus();
+	
+	string getJobname();
+	string getNickname();
+	int getLevel();
+	int getHp();
+	int getMp();
+	int getPower();
+	int getDefence();
+	int getAccuracy();
+	int getSpeed();
+
+	void setJobname(string jobname);
+	void setHp(int hp);
+	void setMp(int mp);
+	void setPower(int power);
+	void setDefence(int defence);
+	void setAccuracy(int accuracy);
+	void setSpeed(int speed);
 
 protected:
 	string job_name = "ÃÊº¸ÀÚ";

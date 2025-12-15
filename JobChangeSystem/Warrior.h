@@ -15,6 +15,7 @@ public:
 		Speed = 10;
 	}
 	void attack();
+	void attack(Monster* monster);
 
 
 };

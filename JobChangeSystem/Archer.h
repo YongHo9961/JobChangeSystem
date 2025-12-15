@@ -17,6 +17,7 @@ public:
 	}
 
 	void attack();
+	void attack(Monster* monster);
 
 
 };

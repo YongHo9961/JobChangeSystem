@@ -15,7 +15,7 @@ public:
 		Defence = 10;
 	}
 	void attack();
-
+	void attack(Monster* monster);
 };
 
 #endif

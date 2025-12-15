@@ -12,3 +12,58 @@ void Player::printPlayerStatus() {
 	cout << "Accuracy: " << Accuracy << " Speed: " << Speed << endl;
 
 }
+
+string Player::getJobname() {
+	return job_name;
+}
+string Player::getNickname() {
+	return nickname;
+}
+int Player::getLevel() {
+	return Level;
+}
+int Player::getHp() {
+	return HP;
+}
+int Player::getMp() {
+	return MP;
+}
+int Player::getPower() {
+	return Power;
+}
+int Player::getDefence() {
+	return Defence;
+}
+int Player::getAccuracy() {
+	return Accuracy;
+}
+int Player::getSpeed() {
+	return Speed;
+}
+
+void Player::setJobname(string jobname) {
+	job_name = jobname;
+}
+void Player::setHp(int hp) {
+	HP = hp;
+}
+void Player::setMp(int mp) {
+	MP = mp;
+}
+void Player::setPower(int power) {
+	Power = power;
+}
+void Player::setDefence(int defence) {
+	Defence = defence;
+}
+void Player::setAccuracy(int accuracy) {
+	Accuracy = accuracy;
+}
+void Player::setSpeed(int speed) {
+	Speed = speed;
+}
+
+
+
+
+

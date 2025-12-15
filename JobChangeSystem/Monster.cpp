@@ -6,7 +6,23 @@
 using namespace std;
 
 void Monster :: attack(Player* player) {
-
+	int damage = getPower() - player->getDefence();
+	if (damage <= 0) {
+		damage = 1;
+	}
+	cout << "슬라임의 몸통박치기!!" << endl;
+	cout << "플레이어는 " << damage << "만큼 체력이 닳았습니다." << endl;
+	player->setHp(player->getHp()-damage);
+	if (player->getHp() - damage <= 0) {
+		player->setHp(0);
+	}
+	if (player->getHp() > 0) {
+		cout << "플레이어의 체력은 " << player->getHp() << "만큼 남았다." << endl;
+	}
+	else {
+		cout << "플레이어의 체력이 모두 닳았다." << endl;
+		cout << "플레이어의 눈 앞이 깜깜해진다..." << endl;
+	}
 }
 
 string Monster :: getName() {

@@ -15,7 +15,7 @@ public:
 		Speed = 40;
 	}
 	void attack();
-
+	void attack(Monster* monster);
 };
 
 #endif // !Thuef_h_
