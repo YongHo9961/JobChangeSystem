@@ -16,10 +16,6 @@ using namespace std;
 int main() {
 	Player* P1 = nullptr;
 	string nickname;
-	Warrior W(nickname);
-	Magician M(nickname);
-	Thief T(nickname);
-	Archer A(nickname);
 	Monster Mon("슬라임");
 	int JobChoice;
 	int NumChoice1;
@@ -28,6 +24,10 @@ int main() {
 	cout << "안녕하세요 용사님" << endl;
 	cout << "닉네임을 입력해주세요." << endl;
 	getline(cin, nickname);
+	Warrior W(nickname);
+	Magician M(nickname);
+	Thief T(nickname);
+	Archer A(nickname);
 	cout << "직업을 선택해주세요." << endl;
 	cout << "1.Warrior 2.Magician 3.Thief 4.Archer" << endl;
 	cin >> JobChoice;
