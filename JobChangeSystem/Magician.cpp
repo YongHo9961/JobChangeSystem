@@ -11,17 +11,17 @@ void Magician::attack(Monster* monster) {
 	if (damage <= 0) {
 		damage = 1;
 	}
-	cout << "ÆÄÀÌ¾î º¼!!" << endl;
-	cout << monster->getName() << "Àº " << damage << "¸¸Å­ÀÇ ÇÇÇØ¸¦ ÀÔ¾ú´Ù." << endl;
+	cout << "íŒŒì´ì–´ ë³¼!!" << endl;
+	cout << monster->getName() << "ì€ " << damage << "ë§Œí¼ì˜ í”¼í•´ë¥¼ ìž…ì—ˆë‹¤." << endl;
 	monster->setHP(monster->getHP() - damage);
 	if (monster->getHP() - damage <= 0) {
 		monster->setHP(0);
 	}
 	if (monster->getHP() > 0) {
-		cout << monster->getName() << "ÀÇ Ã¼·ÂÀº " << monster->getHP() << "¸¸Å­ ³²¾Ò´Ù." << endl;
+		cout << monster->getName() << "ì˜ ì²´ë ¥ì€ " << monster->getHP() << "ë§Œí¼ ë‚¨ì•˜ë‹¤." << endl;
 	}
 	else {
-		cout << monster->getName() << "ÀÌ ¾²·¯Á³´Ù!!" << endl;
-		cout << "ÇÃ·¹ÀÌ¾î´Â ½Â¸®Çß´Ù!!" << endl;
+		cout << monster->getName() << "ì´ ì“°ëŸ¬ì¡Œë‹¤!!" << endl;
+		cout << "í”Œë ˆì´ì–´ëŠ” ìŠ¹ë¦¬í–ˆë‹¤!!" << endl;
 	}
 }

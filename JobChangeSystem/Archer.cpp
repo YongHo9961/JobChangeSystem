@@ -11,20 +11,20 @@ void Archer::attack(Monster* monster) {
 	if (damage <= 0) {
 		damage = 1;
 	}
-	cout << "Æ®¸®ÇÃ ¼¦!!" << endl;
+	cout << "íŠ¸ë¦¬í”Œ ìƒ·!!" << endl;
 	for (int i = 0; i < 3; i++) {
-		monster->setHP(monster->getHP() - damage );
-		cout << monster->getName() << "¿¡°Ô " << damage << "¸¸Å­ ÇÇÇØ¸¦ ÀÔÇû´Ù." << endl;
+		monster->setHP(monster->getHP() - damage);
+		cout << monster->getName() << "ì—ê²Œ " << damage << "ë§Œí¼ í”¼í•´ë¥¼ ìž…í˜”ë‹¤." << endl;
 		if (monster->getHP() <= 0) {
 			monster->setHP(0);
 			break;
 		}
 	}
 	if (monster->getHP() > 0) {
-		cout << monster->getName() << "ÀÇ Ã¼·ÂÀº " << monster->getHP() << "¸¸Å­ ³²¾Ò´Ù." << endl;
+		cout << monster->getName() << "ì˜ ì²´ë ¥ì€ " << monster->getHP() << "ë§Œí¼ ë‚¨ì•˜ë‹¤." << endl;
 	}
 	else {
-		cout << monster->getName() << "ÀÌ ¾²·¯Á³´Ù!!" << endl;
-		cout << "ÇÃ·¹ÀÌ¾î´Â ½Â¸®Çß´Ù!!" << endl;
+		cout << monster->getName() << "ì´ ì“°ëŸ¬ì¡Œë‹¤!!" << endl;
+		cout << "í”Œë ˆì´ì–´ëŠ” ìŠ¹ë¦¬í–ˆë‹¤!!" << endl;
 	}
 }
